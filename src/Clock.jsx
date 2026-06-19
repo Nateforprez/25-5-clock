@@ -52,7 +52,6 @@ class Clock extends React.Component {
                             paused: false
                         })); 
                     } else {
-                        this.audioRef.current.play(); 
                         console.log("setting break time"); 
                         this.setState((prev) => {
                             return {
@@ -61,10 +60,14 @@ class Clock extends React.Component {
                                 breakBegins: true, 
                                 timeLeft: prev.breakTime * 60 
                             }; 
+                        }, () => {
+                            setTimeout(() => {
+                                this.audioRef.current.play().catch((err) => {console.log("missing audio file")}); 
+                            }, 50); 
                         }); 
                     }
                 }
-            }, 1000); /* 1000 */
+            }, 1); /* 1000 */
         
         }
     }
