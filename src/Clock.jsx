@@ -67,7 +67,7 @@ class Clock extends React.Component {
                         }); 
                     }
                 }
-            }, 1); /* 1000 */
+            }, 1000); /* 1000 */
         
         }
     }
