@@ -213,7 +213,7 @@ class Clock extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <audio id="beep" ref={this.audioRef} src='/audio-files/digital_alarm_sound.mp3'></audio>
+                        <audio id="beep" ref={this.audioRef} src='./audio-files/digital_alarm_sound.mp3'></audio>
                     </div>
 
                     <div id="adjust-time">
